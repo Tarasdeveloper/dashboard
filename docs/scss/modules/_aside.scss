@@ -5,11 +5,11 @@
   background-color: $white;
   min-height: 1200px;
   display: none;
-  position: relative;
-
+  
   @include r($r-tb) {
     padding: 36px 28px;
     display: flex;
+    position: relative;
   }
 
   &-active {

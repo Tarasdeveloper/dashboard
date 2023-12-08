@@ -1,1 +1,1 @@
-Created with: gulp, scss, gulp-fileinclude, jquery
+Created with: gulp, html, scss, gulp-fileinclude, jquery

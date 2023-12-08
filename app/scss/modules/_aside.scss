@@ -1,0 +1,104 @@
+.aside {
+  padding: 20px 15px;
+  max-width: 310px;
+  flex-direction: column;
+  background-color: $white;
+  min-height: 1200px;
+  display: none;
+
+  @include r($r-tb) {
+    padding: 36px 28px;
+    display: flex;
+  }
+
+  &-active {
+    display: flex;
+    padding: 20px 15px;
+    max-width: 310px;
+    width: 100%;
+    flex-direction: column;
+    background-color: $white;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 2;
+
+    @include r($r-dt) {
+      padding: 36px 28px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__container {
+    max-width: 310px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 44px);
+  }
+
+  &-nav__item {
+    color: $aside-color;
+    max-width: 250px;
+    border: 1px solid transparent;
+  }
+
+  &-nav__link {
+    padding: 11px 8px 11px 11px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+    &--active {
+      color: $white;
+      background-color: $accent;
+      & svg {
+        fill: #fff;
+        stroke: #fff;
+      }
+    }
+  }
+  &-icon {
+    margin-right: 14px;
+  }
+  .icon {
+    margin-left: auto;
+  }
+
+  &__user {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    position: absolute;
+    bottom: 76px;
+    left: 28px;
+
+    &-img {
+      margin-right: 12px;
+      width: 42px;
+      height: 42px;
+    }
+    &-name {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.14px;
+    }
+    &-job {
+      font-size: 12px;
+      color: #757575;
+      letter-spacing: 0.12px;
+      font-weight: 400;
+    }
+  }
+}
